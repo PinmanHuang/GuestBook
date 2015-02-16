@@ -1,0 +1,47 @@
+.button_index{
+	margin: 2% 0%;
+	border-radius: 5px;
+	border: 1px solid #D0D0D0;
+	padding: 0 5px;
+	height: 30px;
+	font-size: 125%; 
+	font-weight: 500;
+	font-family: monospace;	
+	background-color: #E8E8E8;
+}
+.button_index:hover{background-color: #C0C0C0;}
+.comment{
+	padding: 1% 2% 0 2%;
+	text-align: right;
+}
+#label_post{
+	margin: 0 2%;
+	border-bottom: 2px solid #B0C4DE;
+	text-align: left;
+	font-size: 100%;
+	color: #B0C4DE;
+
+}
+.comment_but{
+	padding: 0 0;
+	height: 50px;
+}
+fieldset{
+	border: 1px solid #B0C4DE;
+	border-radius: 5px;
+}
+legend{
+	padding: 1%;
+	text-align: left;
+	font-weight: 700;
+	font-size: 150%;
+	font-family: monospace;
+}
+.message{
+	text-align: left;
+	font-size: 20px;
+	font-family: monospace;
+}
+.ui form{
+	padding: 2% 2%;
+}

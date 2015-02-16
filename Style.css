@@ -1,0 +1,87 @@
+body{
+	background-color: #4682B4;
+}
+.full{
+	border: 0;
+	width: 100%;
+}
+@media (max-width: 1200px){
+	.full{
+		border: 0;
+		width: 1200px;
+	}
+}
+a{text-decoration: none;}
+a:link{color: white;}
+a:visited{color: white;}
+a:hover{color: white;}
+a:active{color: white}
+#title{
+	margin: 3% 0 1% 0;
+	padding: 1% 15%;
+}
+.Guest{
+	font-size: 300%;
+	font-weight: 800;
+	font-family: monospace;
+}
+.in_up{
+	border: 1px solid white;
+	border-radius: 10px;
+	font-size: 150%;
+	font-weight: 500;
+	font-family: monospace;
+	color: white;
+	background-color: #4682B4;
+	float: right;
+}
+.in_up:hover{background-color: #B0C4DE}
+#in{
+	margin: 0 1%;
+	padding: 1%;
+}
+#up{
+	padding: 1%;
+}
+.sheet{
+	margin: 0 auto;
+	border: 3px solid #D0D0D0;
+	border-radius: 10px;
+	text-align: center;
+	width: 70%;
+	background-color: #FFFAFA;
+}
+.field{
+	margin: 2% 2%;
+}
+#content{
+	border: 0;
+	padding: 0 39%;
+	text-align: left;
+}
+#head{
+	font-size: 400%;
+	font-weight: 900;
+	font-family: cursive;
+}
+.button{
+	margin: 2% auto;
+	border-radius: 10px;
+	border-style: 2px solid gray;
+	padding: 0 5px;
+	height: 30px;
+	width: 100%;
+	font-size: 100%;
+	font-family: monospace;	
+}
+#input_but{
+	margin: 2% 0%;
+	border-radius: 10px;
+	border: 1px solid #D0D0D0;
+	padding: 1% 2%;
+	font-size: 125%; 
+	font-weight: 500;
+	font-family: monospace;	
+	background-color: #E8E8E8;
+}
+#input_but:hover{background-color: #C0C0C0;}
