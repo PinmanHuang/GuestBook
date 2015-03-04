@@ -16,6 +16,10 @@ a:link{color: white;}
 a:visited{color: white;}
 a:hover{color: white;}
 a:active{color: white}
+a.forget_link:link{color: black}
+a.forget_link:visited{color: black}
+a.forget_link:hover{color: black}
+a.forget_link:active{color: black}
 #title{
 	margin: 3% 0 1% 0;
 	padding: 1% 15%;

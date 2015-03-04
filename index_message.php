@@ -15,6 +15,8 @@
 
 			$sql = "INSERT INTO all_message(title, nickname, content) VALUES('$title', '$nickname', '$message')";
 			if (mysqli_query($link, $sql)) {
+				header("Location: ".$_SERVER["HTTP_REFERER"]);
+				echo $_SERVER["HTTP_REFERER"];
 				echo "新增成功";
 			}
 			else{

@@ -48,7 +48,9 @@
 					</div>
 
 					<labels>
-						Forget your password?
+						<a href="signin_forget.php" class="forget_link">
+							Forget your password?
+						</a>
 						<br>
 						or creat account
 					</label>

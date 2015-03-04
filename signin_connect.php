@@ -22,6 +22,7 @@
 			if ($username !=null && $password != null && $row['username'] == $username && $row['password'] == $password) {
 				//張帳號寫入session
 				$_SESSION['username'] = $username;
+				header("Location: http://localhost/GuestBook/index.php");
 				echo "登入成功";
 			}
 			else {

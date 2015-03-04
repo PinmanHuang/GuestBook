@@ -15,7 +15,7 @@
 	<body>
 		<?php
 			include("mysqli_connect.php");
-
+			
 			if ($_SESSION['username'] != null) {
 		?>
 			<div class="full">
@@ -71,9 +71,7 @@
 								<ul>
 									<li>
 										<label>
-											<?php 
-												echo $row['title'];
-											?>
+											pic
 										</label>
 									</li>
 
@@ -96,12 +94,12 @@
 									<li>
 										<label>Reply</label>
 									</li>
-									<?php 
-										}
-									?>
 								</ul>
 							</div>
 						</fieldset>
+						<?php 
+							}
+						?>
 					</div>
 
 					<div class="ui form">
@@ -115,7 +113,7 @@
 							</label>
 
 							<label>
-								<textarea placeholder="leave a message..." name="message"></textarea>
+								<textarea placeholder="leave a message..." name="message" required="required"></textarea>
 							</label>
 
 							<label>

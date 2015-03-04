@@ -41,7 +41,7 @@
 						<div class="two fields" id="content">
 							<div class="required field">
 								<div class="ui icon input">
-									<input type="text" name="username" id="rfInput" placeholder="Username" onblur="checkId()">
+									<input type="text" name="username" id="rfInput" placeholder="Username" onblur="checkId()" pattern="[a-zA-Z0-9]{1,20}" required="required">
 									<i  class="user icon"></i>									
 								</div>
 								<div>
@@ -51,9 +51,8 @@
 
 							<div class="required field">
 								<div class="ui icon input">
-									<input type="password" name="password" placeholder="Password">
+									<input type="password" name="password" placeholder="Password" pattern="[a-zA-Z0-9_]{1,20}" required="required">
 									<i class="lock icon"></i>
-									
 								</div>
 							</div>
 							

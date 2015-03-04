@@ -29,12 +29,8 @@
 					//新增資料到資料庫
 					$sql = "INSERT INTO all_member(username, password, email) VALUES ('$username', '$password', '$email')";
 					if (mysqli_query($link, $sql)) {
+						header("Location: http://localhost/GuestBook/signin.php");
 						echo "新增成功";
-						?>
-							<script type="text/javascript">
-								window.history.back();
-							</script>
-						<?php
 					}
 					else{
 						echo "新增失敗";
