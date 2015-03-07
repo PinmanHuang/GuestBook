@@ -15,7 +15,6 @@
 	<body>
 		<?php
 			include("mysqli_connect.php");
-			
 			if ($_SESSION['username'] != null) {
 		?>
 			<div class="full">
@@ -63,7 +62,9 @@
 								<form>
 									<input type="button" value="Editor" class="button_index">
 									<input type="button" value="Delete" class="button_index">
-									<input type="button" value="Reply" class="button_index">
+									<a href="index_reply.php">
+										<input type="button" value="Reply" class="button_index">
+									</a>
 								</form>
 							</div>
 
