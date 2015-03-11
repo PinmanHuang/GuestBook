@@ -28,19 +28,17 @@
 							<a href="signup.php">
 								<input type="button" class="in_up" id="up" value="Sign up">
 							</a>
-
-							<a href="signin.php">
-								<input type="button" class="in_up" id="in" value="Sign in">
-							</a>
 						</span>
 					</form>
 				</div>
 
 				<div class="sheet">
 					<div class="comment">
-						<label>
-							<input type="button" value="Comment" class="button_index">
-						</label>
+						<a href="#post" class="but_link">
+							<label>
+								<input type="button" value="Comment" class="button_index">
+							</label>
+						</a>						
 					</div>
 
 					<p id="label_post">POSTs</p>
@@ -62,7 +60,7 @@
 								<form>
 									<input type="button" value="Editor" class="button_index">
 									<input type="button" value="Delete" class="button_index">
-									<a href="index_reply.php">
+									<a href="index_reply.php" class="but_link">
 										<input type="button" value="Reply" class="button_index">
 									</a>
 								</form>
@@ -70,16 +68,16 @@
 
 							<div class="message">
 								<ul>
-									<li>
+									<!--li class="list">
 										<label>
 											pic
 										</label>
-									</li>
+									</li-->
 
-									<li>
+									<li class="list" id="user_post">
 										<label>
 											<?php
-												echo $row['nickname'].  $row['time'];
+												echo $row['nickname']." ". $row['time'];
 											?>
 										</label>
 									</li>
@@ -102,26 +100,27 @@
 							}
 						?>
 					</div>
+					<a name="post">
+						<div class="ui form">
+							<form class="field" method="post" action="index_message.php">
+								<label>
+									<input type="text" placeholder="Title..." name="title"><br>
+								</label>
 
-					<div class="ui form">
-						<form class="field" method="post" action="index_message.php">
-							<label>
-								<input type="text" placeholder="Title..." name="title"><br>
-							</label>
+								<label>
+									<input type="text" placeholder="Nickname..." name="nickname"><br>
+								</label>
 
-							<label>
-								<input type="text" placeholder="Nickname..." name="nickname"><br>
-							</label>
+								<label>
+									<textarea placeholder="leave a message..." name="message" required="required"></textarea>
+								</label>
 
-							<label>
-								<textarea placeholder="leave a message..." name="message" required="required"></textarea>
-							</label>
-
-							<label>
-								<input type="submit" value="Submit" class="button_index" name="button">			
-							</label>
-						</form>
-					</div>
+								<label>
+									<input type="submit" value="Submit" class="button_index" name="button">			
+								</label>
+							</form>
+						</div>
+					</a>
 				</div>
 			</div>
 		<?php

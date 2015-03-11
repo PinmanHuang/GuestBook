@@ -8,7 +8,7 @@
 		<?php
 			include("mysqli_connect.php");
 
-			//資料從表單中取出
+			//資料從表單中取出 
 			$title = $_POST['title'];
 			$nickname = $_POST['nickname'];
 			$message = $_POST['message'];

@@ -15,11 +15,15 @@ a{text-decoration: none;}
 a:link{color: white;}
 a:visited{color: white;}
 a:hover{color: white;}
-a:active{color: white}
-a.forget_link:link{color: black}
-a.forget_link:visited{color: black}
-a.forget_link:hover{color: black}
-a.forget_link:active{color: black}
+a:active{color: white;}
+a.forget_link:link{color: black;}
+a.forget_link:visited{color: black;}
+a.forget_link:hover{color: black;}
+a.forget_link:active{color: black;}
+a.but_link:link{color: black;}
+a.but_link:visited{color: black;}
+a.but_link:hover{color: black;}
+a.but_link:active{color: black;}
 #title{
 	margin: 3% 0 1% 0;
 	padding: 1% 15%;
@@ -39,7 +43,7 @@ a.forget_link:active{color: black}
 	background-color: #4682B4;
 	float: right;
 }
-.in_up:hover{background-color: #B0C4DE}
+.in_up:hover{background-color: #B0C4DE;}
 #in{
 	margin: 0 1%;
 	padding: 1%;
@@ -89,3 +93,14 @@ a.forget_link:active{color: black}
 	background-color: #E8E8E8;
 }
 #input_but:hover{background-color: #C0C0C0;}
+li{list-style-type: none;}
+.list{
+	margin: 10px 0;
+}
+#user_post{
+	margin: 5px 100px 5px 0;
+	border-bottom: 2px solid #B0C4DE;
+	text-align: left;
+	font-size: 100%;
+	color: gray;
+}
