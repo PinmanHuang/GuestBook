@@ -2,10 +2,10 @@
 <html>
 	<head lang="zn-TW">
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="semantic.min.css">
-		<script type="text/javascript" src="semantic.min.js"></script>
-		<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="Style.css">
+		<link rel="stylesheet" type="text/css" href="./layout/semantic.min.css">
+		<script type="text/javascript" src="./layout/semantic.min.js"></script>
+		<script type="text/javascript" src="./layout/jquery-2.1.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="./layout/Style.css">
 	</head>
 
 	<body>

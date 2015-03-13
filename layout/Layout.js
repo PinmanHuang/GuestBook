@@ -21,9 +21,10 @@ function checkId () {
 	xmlhttp.onreadystatechange = function() {	
 		if (xmlhttp.readyState == 4) {
 		    if (xmlhttp.status == 200) {
+		    	//取回signup_checkid.php回傳值，判斷資料庫中有無相同使用者名稱
 				if(xmlhttp.responseText==1) {
-
-			  		document.getElementById("showdata").innerHTML="<font color=red size=1%>*此帳號不可使用</font>";
+					//插入html
+			  		document.getElementById("showdata").innerHTML="<font color=red size=2%>*此帳號不可使用</font>";
 				}
 		    }
 		}

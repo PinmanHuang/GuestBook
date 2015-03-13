@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-	session_start();
+	include("mysqli_connect.php");
 ?>
 <html>
 	<head lang="an-TW">
@@ -8,13 +8,11 @@
 	</head>
 
 	<body>
-		<?php
-			include("mysqli_connect.php");
-
+		<?php			
 			//資料從表單中取出
-			$username = $_POST['username'];
-			$password = $_POST['password'];
-			$password2 =  $_POST['password2'];
+			$username = htmlspecialchars($_POST['username']);
+			$password = htmlspecialchars($_POST['password']);
+			$password2 = htmlspecialchars($_POST['password2']);
 			$email = $_POST['email'];
 
 			//選擇username欄位比對是否已存在相同名稱

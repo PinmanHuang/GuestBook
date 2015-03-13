@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+	include("mysqli_connect.php");
+?>
 <html>
 	<head lang="zn-TW">
 		<meta charset="utf-8">
@@ -6,12 +9,10 @@
 
 	<body>
 		<?php
-			include("mysqli_connect.php");
-
 			//資料從表單中取出 
-			$title = $_POST['title'];
-			$nickname = $_POST['nickname'];
-			$message = $_POST['message'];
+			$title = htmlspecialchars($_POST['title']);
+			$nickname = htmlspecialchars($_POST['nickname']);
+			$message = htmlspecialchars($_POST['message']);
 
 			$sql = "INSERT INTO all_message(title, nickname, content) VALUES('$title', '$nickname', '$message')";
 			if (mysqli_query($link, $sql)) {

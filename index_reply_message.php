@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+	include("mysqli_connect.php");
+?>
 <html>
 	<head lang="zn-TW">
 		<meta charset="utf-8">
@@ -6,10 +9,8 @@
 
 	<body>
 		<?php
-			include("mysqli_connect.php");
-
 			//資料從表單中取出
-			$message = $_POST['message'];
+			$message = htmlspecialchars($_POST['message']);
 			//資料插入資料庫
 			$sql = "INSERT INTO reply_message(reply_content) VALUES('$message')";
 			if (mysqli_query($link, $sql)) {
