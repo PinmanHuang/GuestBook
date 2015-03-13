@@ -5,7 +5,7 @@
 			$db_server = "localhost";	//位置
 			$db_user = "pinmanhuang";	//帳號
 			$db_name = "db_guestbook";	//名稱
-			$db_password = "Idyllic_World1110";	//密碼
+			$db_password = "datebase";	//密碼
 
 			//連結資料庫
 			$link = mysqli_connect($db_server, $db_user, $db_password, $db_name);
