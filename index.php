@@ -8,8 +8,16 @@
 		<link rel="stylesheet" type="text/css" href="./layout/semantic.min.css">
 		<script type="text/javascript" src="./layout/semantic.min.js"></script>
 		<script type="text/javascript" src="./layout/jquery-2.1.3.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="./layout/style_index.css">
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#show").click(function() {
+				alert("die");
+				$(".reply_field").hidden();
+			});
+		});
+		</script>
 		<link rel="stylesheet" type="text/css" href="./layout/style.css">
+		<link rel="stylesheet" type="text/css" href="./layout/style_index.css">
 	</head>
 
 	<body>
@@ -67,58 +75,94 @@
 
 				<p id="label_post">POSTs</p>
 
+				<?php
+					$sql = "SELECT * FROM all_message";
+					$result = mysqli_query($link, $sql);									
+					while($row = mysqli_fetch_assoc($result)){
+						$msg_id = $row['id'];
+						$title = $row['title'];
+						$nickname = $row['nickname'];
+						$time = $row['time'];
+						$content = $row['content'];
+				?>
+
 				<div class="comment">
+					
+					<div class="comment_but">
+					<form>
+						<input type="button" value="Editor" class="button_index">
+						<input type="button" value="Delete" class="button_index">
+						<input type="button" value="Reply" class="button_index" id="show">
+					</form>
+				</div>
+
+				<div class="message">
+					<label id="msg_title">
+						<?php 
+							echo $title;
+						?>
+					</label><br>
+
+					<label id="msg_name_time">
+						<?php
+							echo $nickname." ". $time;
+						?>
+					</label><br>
+
+					<label id="msg_content">
+						<?php
+							echo $content;
+						?>
+					</label><br>
+					<label id="reply_title">
+						Reply	
+					</label><br>
+
 					<?php
-						$sql = "SELECT * FROM all_message";
-						$result = mysqli_query($link, $sql);
-						while($row = mysqli_fetch_assoc($result)){
+						$sql_reply = "SELECT * FROM reply_message WHERE reply_rfID ='$msg_id'";
+						$result_reply = mysqli_query($link, $sql_reply);
+						while($row_reply = mysqli_fetch_assoc($result_reply)){
+							$content_reply = $row_reply['reply_content'];
+							$time_reply = $row_reply['reply_time'];
+							$rfid_reply = $row_reply['reply_rfID'];
 					?>
-					<fieldset>
-						<legend>
-							<?php 
-								echo $row['title'];
-							?>
-						</legend>
-							<div class="comment_but">
-							<form>
-								<input type="button" value="Editor" class="button_index">
-								<input type="button" value="Delete" class="button_index">
-								<a href="index_reply.php" class="but_link">
-									<input type="button" value="Reply" class="button_index">
-								</a>
-							</form>
-						</div>
-							<div class="message">
-							<ul>
-								<!--li class="list">
-									<label>
-										pic
-									</label>
-								</li-->
-									<li class="list" id="user_post">
-									<label>
-										<?php
-											echo $row['nickname']." ". $row['time'];
-										?>
-									</label>
-								</li>
-									<li>
-									<label>
-									<?php
-										echo $row['content'];
-									?>
-									</label>
-								</li>
-									<li>
-									<label>Reply</label>
-								</li>
-							</ul>
-						</div>
-					</fieldset>
-					<?php 
+
+					<label class="msg_reply">
+						<?php
+							echo $time_reply;
+						?>
+					</label><br>
+					<label class="msg_reply" id="reply_content">
+						<?php
+							echo $content_reply;
+						?>
+					</label><br>
+					<?php
 						}
 					?>
 				</div>
+
+				<div class="ui form" id="reply_field">
+					<form class="field" method="post" action="index_reply_message.php">
+						<label>
+							<?php
+								echo '<input type="hidden" name="id" value="'. $msg_id. '">';
+							?>
+						</label>
+
+						<label>
+							<textarea placeholder="leave a reply message..." name="message" required="required"></textarea>
+						</label>
+
+						<label>
+							<input type="submit" value="Submit" class="button_index" name="button">			
+						</label>
+					</form>
+				</div>
+				<?php
+					}
+				?>
+
 				<a name="post">
 					<div class="ui form">
 						<form class="field" method="post" action="index_message.php">

@@ -9,7 +9,7 @@
 
 	<body>
 		<?php			
-			//資料從表單中取出
+			//資料從表單中取出，避免XSS
 			$username = htmlspecialchars($_POST['username']);
 			$password = htmlspecialchars($_POST['password']);
 			$password2 = htmlspecialchars($_POST['password2']);

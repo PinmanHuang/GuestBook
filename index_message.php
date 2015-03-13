@@ -23,14 +23,14 @@
 			$rf_meb_id = $row['id'];
 
 			$sql = "INSERT INTO all_message(title, nickname, content, rf_id) VALUES('$title', '$nickname', '$message', '$rf_meb_id')";
-			/*if (mysqli_query($link, $sql)) {
+			if (mysqli_query($link, $sql)) {
 				header("Location: ".$_SERVER["HTTP_REFERER"]);
 				echo $_SERVER["HTTP_REFERER"];
 				echo "新增成功";
 			}
 			else{
 				echo "新增失敗";
-			}*/
+			}
 		?>
 	</body>
 </html>

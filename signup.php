@@ -11,9 +11,9 @@
 			});
 		});
 		</script>
-		<script type="text/javascript" src="semantic.min.js"></script>
-		<script type="text/javascript" src="Layout.js"></script>
-		<link rel="stylesheet" type="text/css" href="Style.css">
+		<script type="text/javascript" src="./layout/semantic.min.js"></script>
+		<script type="text/javascript" src="./layout/Layout.js"></script>
+		<link rel="stylesheet" type="text/css" href="./layout/Style.css">
 	</head>
 
 	<body>
