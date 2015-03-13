@@ -43,6 +43,9 @@
 							}
 							if (isset($_SESSION['username'])) {
 						?>
+						<a href="profile.php">
+							<input type="button" class="in_up" id="in" value="Edit Profile">
+						</a>
 						<a href="logout.php">
 							<input type="button" class="in_up" id="up" value="Log out">
 						</a>

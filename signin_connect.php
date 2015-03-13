@@ -27,12 +27,10 @@
 				echo "登入成功";
 			}
 			else {
-				header("Location: ".$_SERVER["HTTP_REFERER"]);
-				echo $_SERVER["HTTP_REFERER"];
 				if (isset($_SESSION['username'])) {
 					destroySession();
 				}
-				echo "登入失敗";
+				echo "登入失敗"; ;
 			}
 		?>
 	</body>
