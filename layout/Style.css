@@ -44,23 +44,20 @@ a.but_link:active{color: black;}
 	float: right;
 }
 .in_up:hover{background-color: #B0C4DE;}
-#in{
-	margin: 0 1%;
-	padding: 1%;
-}
-#up{
-	padding: 1%;
+.sheet_sign{
+	margin: 0 auto;
+	border: 3px solid #D0D0D0;
+	border-radius: 10px;
+	width: 70%;
+	text-align: center;
+	background-color: #FFFAFA;
 }
 .sheet{
 	margin: 0 auto;
 	border: 3px solid #D0D0D0;
 	border-radius: 10px;
-	text-align: center;
 	width: 70%;
 	background-color: #FFFAFA;
-}
-.field{
-	margin: 2% 2%;
 }
 #content{
 	border: 0;
@@ -93,7 +90,7 @@ a.but_link:active{color: black;}
 	background-color: #E8E8E8;
 }
 #input_but:hover{background-color: #C0C0C0;}
-li{list-style-type: none;}
+.li{list-style-type: none;}
 .list{
 	margin: 10px 0;
 }
@@ -112,4 +109,11 @@ li{list-style-type: none;}
 }
 #showdata{
 	color: gray;
+}
+.ui.button{
+	margin: 2% 0.5%;
+	width: 100px;
+	height: 35px;
+	float: right;
+	text-align: center;
 }

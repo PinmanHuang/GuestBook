@@ -9,6 +9,20 @@
 	</head>
 
 	<body>
+		<?php
+			if (isset($_GET['status']) && $_GET['status'] == 1) {
+		?>
+		<div class="ui success message" id="hide_success_msg">
+			<i class="close icon" id="delete_success_msg"></i>
+			<div class="header">
+				<?php
+					echo "Login fail.";
+				?>
+			</div>
+		</div>
+		<?php
+			}
+		?>
 		<div class="full">
 			<div id="title">
 				<form>
@@ -17,17 +31,17 @@
 					</label>
 					<span>
 						<a href="signup.php">
-							<input type="button" class="in_up" id="up" value="Sign up">
+							<input type="button" class="ui button" value="Sign up">
 						</a>
 						
 						<a href="signin.php">
-							<input type="button" class="in_up" id="in" value="Sign in">
+							<input type="button" class="ui button" value="Sign in">
 						</a>
 					</span>
 				</form>
 			</div>
 
-			<div class="sheet">
+			<div class="sheet_sign">
 				<p id="head">Sign in</p>
 
 				<form name="form" method="post" action="signin_connect.php">

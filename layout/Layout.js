@@ -38,3 +38,32 @@ function checkId () {
 		}
 	}
 }
+$(document).ready(function() {
+	$("#delete_success_msg").mousedown(function() {
+		$("#hide_success_msg").hide();
+	});
+	$("#message_but").click(function(){
+		var title = $("#ms_title").val();
+		var nickname = $("#nickname").val();
+		var message = $("#message").val();
+		$.ajax({
+			type: 'POST',
+			url: 'index_message.php',
+			data: {
+				"title": title,
+				"nickname": nickname,
+				"message": message
+			},
+			dataType: 'json',
+			success: function(msg){
+				console.log(msg);
+				//alert("成功");
+				$("#commentList").before("<div class='ui blue segment'><div class='msgContent'><label id='msg_title'>"+title+"</label><br><label id='msg_name_time'>"+nickname+"</label><br><label id='msg_content'>"+message+"</label><br><label id='reply_title'>Reply</label><br></div></div>");
+			},
+			error: function(xhr, status, error){
+				var err = eval("(" + xhr.responseText + ")");
+  				alert(err.Message);
+			}
+		});
+	});
+});

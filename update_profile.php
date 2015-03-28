@@ -13,8 +13,13 @@
 			$username = $_SESSION['username'];
 			$password = $_POST['password'];
 			$password2 = $_POST['password2'];
-			if ($username != null && $password != null && $password2 != null && $password == $password2) {				$sql = "UPDATE all_member SET password = '$password' WHERE username = '$username'";
-				if (mysqli_query($link, $sql)) {
+			if ($username != null && $password != null && $password2 != null && $password == $password2) {				
+				$sql = "UPDATE all_member SET password = ? WHERE username = ?";
+				$queryStatus = $link -> prepare($sql);
+				$queryStatus -> bind_param("ss", $password, $username);
+				$queryStatus -> execute();
+				//$sql = "UPDATE all_member SET password = '$password' WHERE username = '$username'";
+				if ($queryStatus) {
 					destroySession();
 					header("Location: http://localhost/GuestBook/signin.php");
 					echo "修改成功";

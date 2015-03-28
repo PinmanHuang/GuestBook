@@ -25,16 +25,16 @@
 					</label>
 					<span>
 						<a href="signup.php">
-							<input type="button" class="in_up" id="up" value="Sign up">
+							<input type="button" class="ui button"value="Sign up">
 						</a>
 						<a href="signin.php">
-							<input type="button" class="in_up" id="in" value="Sign in">
+							<input type="button" class="ui button" value="Sign in">
 						</a>
 					</span>
 				</form>
 			</div>
 
-			<div class="sheet">
+			<div class="sheet_sign">
 				<p id="head">Sign up</p>
 
 					<form name="form" method="post" action="signup_register.php">
@@ -44,8 +44,8 @@
 									<input type="text" name="username" id="rfInput" placeholder="Username" onblur="checkId()" pattern="[a-zA-Z0-9]{1,20}" required="required">
 									<i  class="user icon"></i>									
 								</div>
-								<div>
-									<p id="showdata"></p>
+								<div id="showdata">
+									
 								</div>
 							</div>
 

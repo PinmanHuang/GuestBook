@@ -7,7 +7,7 @@
 	//這幾行是必須的
 
 	$mail->Username = "pinmanhuang@gmail.com";
-	$mail->Password = "520Full_Courtpress";
+	$mail->Password = "";
 	//這邊是你的gmail帳號和密碼
 
 	$mail->FromName = "GuestBook Server";
@@ -61,7 +61,9 @@
 	//如果有錯誤會印出原因
 	}
 	else{ 
-	echo "寄信成功";
+		header("Location: http://localhost/GuestBook/signin.php");
+		echo $_SERVER["HTTP_REFERER"];
+		echo "寄信成功";
 	}
 
 	//避免亂碼產生

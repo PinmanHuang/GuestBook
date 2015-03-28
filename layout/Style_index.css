@@ -31,13 +31,8 @@
 	font-size: 20px;
 	font-family: monospace;
 }
-.ui form{
-	padding: 2% 2%;
-}
 #msg_title{
 	margin: 10px 0;
-	border-bottom: 2px solid #6495ed;
-	padding: 0 80% 0 2%;
 	font-weight: 700;
 	font-size: 150%;
 	color: #4682b4;
@@ -45,29 +40,31 @@
 #msg_name_time{
 	margin: 10px 0;
 	border: 0 100px;
-	padding: 0 80% 0 2%;
 	text-align: right;
 }
 #msg_content{
 	margin: 10px 0;
 	border: 0 100px;
-	padding: 0 80% 0 2%;
 }
 .msg_reply{
 	margin: 10px 0;
 	border: 0 100px;
-	padding: 0 80% 0 2%;
 }
 #reply_title{
 	margin: 10px 0;
-	border-bottom: 2px solid #add8e6;
-	padding: 0 80% 0 2%;
 	font-weight: 600;
 	font-size: 120%;
 	color: #87cefa;
 }
 #reply_content{
 	margin: 10px 0;
-	border-bottom: 1px solid #add8e6;
-	padding: 0 80% 0 2%;
+}
+.msgInput{
+	padding: 0% 2%;
+}
+.ui.blue.segment{
+	margin: 2% 2%;
+}
+#replymsgSub{
+	margin: 1% 0%;
 }
