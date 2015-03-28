@@ -8,21 +8,17 @@
 	//避免SQL Injection
 	//選擇username欄位比對是否已存在相同名稱
 	$sql_check = "SELECT * FROM all_member WHERE username = ?";
-	//$sql_check = "SELECT * FROM all_member WHERE username = '$username'";
 	$result_check = $link -> prepare($sql_check);
 	$result_check -> bind_param("s", $username);
 	$result_check -> execute();
 	$result = $result_check -> get_result();
-	//$result_check = mysqli_query($link, $sql_check);
 	$row_check = $result -> fetch_assoc();
-	//$row_check = mysqli_fetch_assoc($result_check);
 	//輸入形式是否正確
 	if ($username != null && $password != null && $password2 != null && $password == $password2) {
 		//檢查使用者名稱有無重複
 		if ( $row_check['username'] == null) {
 			//新增資料到資料庫
 			$sql = "INSERT INTO all_member(username, password, email) VALUES (?,?,?)";
-			//$sql = "INSERT INTO all_member(username, password, email) VALUES ('$username', '$password', '$email')";
 			$query = $link -> prepare($sql);
 			$query -> bind_param("sss",$username, $password, $email);
 			$query -> execute();

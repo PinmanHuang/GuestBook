@@ -6,7 +6,6 @@
 	$db_name = "db_guestbook";	//名稱
 	$db_password = "database";	//密碼
 	//連結資料庫
-	//$link = mysqli_connect($db_server, $db_user, $db_password, $db_name);
 	$link = new mysqli($db_server, $db_user, $db_password, $db_name);
 	if (!$link) {
 		echo "資料庫連結錯誤代碼：". mysqli_connect_errno(). "<br>";
@@ -27,5 +26,4 @@
 		$loggedin = FALSE;
 	}
 	$link -> query("SET NAMES utf8");
-	//mysqli_query($link, "SET NAMES utf8");
 ?>

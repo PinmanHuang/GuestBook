@@ -15,7 +15,6 @@
 
 			//資料插入資料庫
 			$sql = "INSERT INTO reply_message(reply_content, reply_rfID) VALUES(?,?)";
-			//$sql = "INSERT INTO reply_message(reply_content, reply_rfID) VALUES('$message', '$rfid')";
 			$queryStatus = $link -> prepare($sql);
 			$queryStatus -> bind_param("si",$message, $rfid);
 			$queryStatus -> execute();

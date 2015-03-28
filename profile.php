@@ -27,14 +27,11 @@
 					if ($_SESSION['username'] != NULL) {
 						$username = $_SESSION['username'];
 						$sql = "SELECT * FROM all_member WHERE username = ?";
-						//$sql = "SELECT * FROM all_member WHERE username = '$username'";
 						$result = $link -> prepare($sql);
 						$result -> bind_param("s", $username);
 						$result -> execute();
 						$getresult = $result -> get_result();
-						//$result = mysqli_query($link, $sql);
 						$row = $getresult -> fetch_assoc();
-						//$row = mysqli_fetch_assoc($result);
 				?>
 				<form name="form" method="post" action="update_profile.php">
 					<div class="required field">

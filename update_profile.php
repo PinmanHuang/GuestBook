@@ -18,7 +18,6 @@
 				$queryStatus = $link -> prepare($sql);
 				$queryStatus -> bind_param("ss", $password, $username);
 				$queryStatus -> execute();
-				//$sql = "UPDATE all_member SET password = '$password' WHERE username = '$username'";
 				if ($queryStatus) {
 					destroySession();
 					header("Location: http://localhost/GuestBook/signin.php");

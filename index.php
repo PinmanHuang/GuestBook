@@ -71,7 +71,6 @@
 							//取出留言內容
 							$sql = "SELECT * FROM all_message";
 							$result = $link -> query($sql);
-							//$result = mysqli_query($link, $sql);
 							$rows = $result -> fetch_all(MYSQLI_NUM);
 							foreach($rows as $row){
 								$msg_id = $row[0];
@@ -136,14 +135,11 @@
 									<?php
 										//取出回覆內容
 										$sql_reply = "SELECT * FROM reply_message WHERE reply_rfID = ?";
-										//$sql_reply = "SELECT * FROM reply_message WHERE reply_rfID ='$msg_id'";
 										$result_reply = $link -> prepare($sql_reply);
 										$result_reply -> bind_param("s", $msg_id);
 										$result_reply -> execute();
 										$result = $result_reply -> get_result();
-										//$result_reply = mysqli_query($link, $sql_reply);
 										while($row_reply = $result -> fetch_assoc()){
-											//$row_reply = mysqli_fetch_assoc($result_reply)
 											$content_reply = $row_reply['reply_content'];
 											$rfid_reply = $row_reply['reply_rfID'];
 									?>

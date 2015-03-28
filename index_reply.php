@@ -12,7 +12,6 @@
 				<label>
 					<textarea placeholder="leave a reply message..." name="message" required="required"></textarea>
 				</label>
-
 				<label>
 					<input type="submit" value="Submit" class="button_index" name="button">			
 				</label>
